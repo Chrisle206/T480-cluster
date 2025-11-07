@@ -17,3 +17,10 @@ spec:
           image: sissbruecker/linkding:1.44.1
           ports:
             - containerPort: 9090
+          volumeMounts:
+            - name: linkding-data-pvc
+              mountPath: /Users/chris/Repos/github.com/chris/T480-cluster
+      volumes:
+        - name: linkding-data-pvc
+          PersistentVolumeClaim:
+            claimName: linkding-data-pvc
