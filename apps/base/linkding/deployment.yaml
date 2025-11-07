@@ -19,8 +19,8 @@ spec:
             - containerPort: 9090
           volumeMounts:
             - name: linkding-data-pvc
-              mountPath: /Users/chris/Repos/github.com/chris/T480-cluster
+              mountPath: /etc/linkding/data
       volumes:
         - name: linkding-data-pvc
-          PersistentVolumeClaim:
+          persistentVolumeClaim:
             claimName: linkding-data-pvc
