@@ -15,6 +15,13 @@ spec:
       containers:
         - name: linkding
           image: sissbruecker/linkding:1.31.0
+          securityContext:
+            runAsUser: 1000
+            runAsGroup: 1000
+            allowPriviledgeEscalation: false
+            capabilities:
+              drop:
+                - ALL
           ports:
             - containerPort: 9090
 
