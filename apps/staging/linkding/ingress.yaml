@@ -5,7 +5,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: ldt480.christopherbaole.net
+    - host: lds.christopherbaole.net
       http:
         paths:
           - backend:
